@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import com.dodream.www.list_0713.data.person;
+import com.dodream.www.list_0713.widget.v_person;
 
 public class a_custom extends AppCompatActivity {
     ListView listView;
@@ -17,6 +18,14 @@ public class a_custom extends AppCompatActivity {
         setContentView(R.layout.a_custom);
         listView = (ListView) findViewById(R.id.lv_custom);
         ada_custom = new ada_custom();
+        ada_custom.setOnAdapterImageClickListener(new ada_custom.OnAdapterImageClickListener() {
+
+            @Override
+            public void onAdapterImageClick(ada_custom adapter, v_person view, person person) {
+                //작동
+            }
+        });
+
         listView.setAdapter(ada_custom);
 
         init_data();

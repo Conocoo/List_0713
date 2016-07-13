@@ -10,10 +10,7 @@ import com.dodream.www.list_0713.widget.v_person;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Tacademy on 2016-07-13.
- */
-public class ada_custom extends BaseAdapter {
+public class ada_custom extends BaseAdapter implements v_person.OnImageClickListener {
     List<person> list = new ArrayList<>();
 
     public void add(person p) {
@@ -41,10 +38,28 @@ public class ada_custom extends BaseAdapter {
         v_person v;
         if (view == null) {
             v = new v_person(viewGroup.getContext());
+            v.setOnImageClickListener(this);
         } else {
             v = (v_person) view;
         }
         v.setPerson(list.get(i));
         return v;
     }
+
+    public interface OnAdapterImageClickListener {
+        public void onAdapterImageClick(ada_custom adapter, v_person view, person person);
+    }
+
+    OnAdapterImageClickListener mAdapterListener;
+    public void setOnAdapterImageClickListener(OnAdapterImageClickListener listener) {
+        mAdapterListener = listener;
+    }
+
+    @Override
+    public void onImageClick(v_person view, person person) {
+        if (mAdapterListener != null) {
+            mAdapterListener.onAdapterImageClick(this, view, person);
+        }
+    }
+
 }

@@ -47,6 +47,10 @@ public class v_person extends FrameLayout {
         tv_age.setText("" + person.getAge());
     }
 
+    public void setOnImageClickListener() {
+
+    }
+
     public interface OnImageClickListener {
         void onImageClick(v_person _v, person _p);
     }
