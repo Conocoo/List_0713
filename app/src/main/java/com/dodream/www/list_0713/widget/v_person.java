@@ -1,4 +1,4 @@
-package com.dodream.www.list_0713.wiget;
+package com.dodream.www.list_0713.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -47,12 +47,12 @@ public class v_person extends FrameLayout {
         tv_age.setText("" + person.getAge());
     }
 
-    public interface onImageClickListener{
+    public interface OnImageClickListener {
         void onImageClick(v_person _v, person _p);
     }
 
-    onImageClickListener mListener;
-    public void setonImageClickListener(onImageClickListener listener){
+    OnImageClickListener mListener;
+    public void setOnImageClickListener(OnImageClickListener listener){
         mListener=listener;
     }
 

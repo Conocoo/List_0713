@@ -39,10 +39,11 @@ public class a_choice extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (arrayAdapter.getCount() == 0) return;
                 if (listView.getChoiceMode() == ListView.CHOICE_MODE_SINGLE) {
                     int i = listView.getCheckedItemPosition();
                     arrayAdapter.remove((String) listView.getItemAtPosition(i));
-                } else if(listView.getChoiceMode() == ListView.CHOICE_MODE_MULTIPLE) {
+                } else if (listView.getChoiceMode() == ListView.CHOICE_MODE_MULTIPLE) {
                     SparseBooleanArray array = listView.getCheckedItemPositions();
                     List<String> relist = new ArrayList<>();
                     for (int idx = 0; idx < array.size(); idx++) {
