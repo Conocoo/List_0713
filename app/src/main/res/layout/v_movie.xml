@@ -5,7 +5,7 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:id="@+id/image_photo"
+        android:id="@+id/vm_photo"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -14,10 +14,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text=""
-        android:id="@+id/text_message"
+        android:text="Medium Text"
+        android:id="@+id/vm_title"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/image_photo"
-        android:layout_toEndOf="@+id/image_photo"
-        android:layout_marginRight="40dp" />
+        android:layout_toRightOf="@+id/vm_photo"
+        android:layout_toEndOf="@+id/vm_photo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/vm_year"
+        android:layout_below="@+id/vm_title"
+        android:layout_toRightOf="@+id/vm_photo"
+        android:layout_toEndOf="@+id/vm_photo" />
 </RelativeLayout>

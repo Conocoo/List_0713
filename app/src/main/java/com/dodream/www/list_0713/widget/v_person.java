@@ -26,8 +26,8 @@ public class v_person extends FrameLayout {
 
     public void init() {
         inflate(getContext(), R.layout.v_person, this);
-        iv_person = (ImageView) findViewById(R.id.iv_photo);
-        tv_name = (TextView) findViewById(R.id.tv_name);
+        iv_person = (ImageView) findViewById(R.id.rv_photo);
+        tv_name = (TextView) findViewById(R.id.rv_name);
         tv_age = (TextView) findViewById(R.id.tv_age);
 
         iv_person.setOnClickListener(new OnClickListener() {
